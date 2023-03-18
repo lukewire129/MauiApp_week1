@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp_week1.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MauiApp_week1.Views"
+    Background="#F3F4F7">
+    <ContentPage.Resources>
+        <Style x:Key="paddingGrid" TargetType="Grid">
+            <Setter Property="Padding" Value="20, 20" />
+            <Setter Property="Background" Value="#FFFFFF" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+        <ScrollView VerticalScrollBarVisibility="Default">
+            <Grid RowDefinitions="500, 180, 120, 415" RowSpacing="10">
+                <Image
+                    Grid.Row="0"
+                    HeightRequest="500"
+                    Source="maxresdefault.jpg" />
+                <Grid Grid.Row="1" Style="{DynamicResource paddingGrid}">
+                    <views:MainViewA />
+                </Grid>
+                <Grid Grid.Row="2" Style="{StaticResource paddingGrid}">
+                    <views:MainViewB />
+                </Grid>
+                <Grid Grid.Row="3" Style="{StaticResource paddingGrid}">
+                    <views:MainViewC />
+                </Grid>
+            </Grid>
+        </ScrollView>
+        <Button
+            BackgroundColor="#9BBEFB"
+            CornerRadius="0"
+            FontSize="18"
+            HeightRequest="50"
+            Text="확인"
+            VerticalOptions="End" />
+    </Grid>
+
+</ContentPage>

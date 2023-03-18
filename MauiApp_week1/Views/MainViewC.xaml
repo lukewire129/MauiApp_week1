@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MauiApp_week1.Views.MainViewC"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:units="clr-namespace:MauiApp_week1.Views.Units">
+    <VerticalStackLayout Spacing="20">
+        <VerticalStackLayout Spacing="10">
+            <Label FontAttributes="Bold" Text="청소 도구를 꼭 준비해주세요." />
+            <Grid RowDefinitions="*, 10,*">
+                <Grid Grid.Row="0">
+                    <Grid ColumnDefinitions="*,10,*,10,*,10, *">
+                        <Grid Grid.Column="0">
+                            <units:CustomFrameOption Name="청소기" />
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <units:CustomFrameOption Name="쓰레기봉투" />
+                        </Grid>
+                        <Grid Grid.Column="4">
+                            <units:CustomFrameOption Name="수세미" />
+                        </Grid>
+                        <Grid Grid.Column="6">
+                            <units:CustomFrameOption Name="욕실세제" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid ColumnDefinitions="*,10,*,10,*,10, *">
+                        <Grid Grid.Column="0">
+                            <units:CustomFrameOption Name="밀대걸레" />
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <units:CustomFrameOption Name="고무장갑" />
+                        </Grid>
+                        <Grid Grid.Column="4">
+                            <units:CustomFrameOption Name="주방세제" />
+                        </Grid>
+                        <Grid Grid.Column="6">
+                            <units:CustomFrameOption Name="걸레" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Style="{StaticResource EndLable}" Text="취소/변경시 규정에 따라 수수료가 부과됩니다." />
+            <Label
+                FontAttributes="Bold"
+                FontSize="14"
+                Text="수수료 규정보기"
+                TextColor="#105FF5" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentView>
